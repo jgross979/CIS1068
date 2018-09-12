@@ -60,14 +60,16 @@ public class AsciiArt{
   }//parkingSpaces
 
   public static void oneParkingSpace(){
+    int spaceWidth = (PARKING_WIDTH -2)/2;
     System.out.print('|');
-    for(int i = 0; i < (PARKING_WIDTH -2)/2; i++){   //Subtract outer lines +
+    for(int i = 0; i < spaceWidth; i++){   //Subtract outer lines +
       System.out.print("_");                         //divide because it is a singular spot
     }
   }//oneParkingSpace
 
   public static void centerParking(){
-    for(int i = 0; i < SIZE * 2; i++){
+    int spacesToCenter = SIZE * 2;
+    for(int i = 0; i < spacesToCenter; i++){
       System.out.print(" ");
     }
   }//centerParking
@@ -198,7 +200,8 @@ public class AsciiArt{
     }
 
     public static void stadiumBottomSpaces(int line){
-      for(int i = 0; i < (STADIUM_WIDTH/2) - (line * 2); i++){
+      int numberOfSpaces = (STADIUM_WIDTH/2) - (line * 2);
+      for(int i = 0; i < numberOfSpaces; i++){
         System.out.print(" ");
       }
     }//stadiumTopSpaces
