@@ -1,3 +1,19 @@
+/*
+*Jared Gross
+*October 1, 2018
+*Assignment 5
+*
+*CIS1068
+*Professor Fiore
+*
+*Description: Game of Havsta made with Scanner, Random, and an Array. Users play against
+*             the computer in a game similar to rock, paper, scissors. Users choose one of
+*             the given options, and the computer randomly chooses an option. After each round
+*             either the player or the computer gains a point, and the scores are shown once the
+*             player types 'n' to stop playing. 
+*/
+
+
 import java.util.*;
 
 public class Havsta {

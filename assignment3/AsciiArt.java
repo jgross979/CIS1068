@@ -5,9 +5,10 @@
 *Professor Fiore
 *
 *Description: This program uses class constants, for loops, and conditionals to
-*             draw AsciiArt of the linc and its parking lot.
+*             draw AsciiArt of the linc and its parking lot. It also prints a flag
+*             using a triple nested for loop.
 *
-*             -This program works best when the constant SIZE >= 2.
+*             -This program works best when the constant SIZE >= 4.
 *             -The AsciiArt grows or shrinks in proportion to the value of SIZE
 *             -No constant other than SIZE should be changed.
 */
@@ -28,6 +29,7 @@ public class AsciiArt{
   public static void main(String[] args){
     parkingLot();
     lincStadium();
+    flag();
   }//main
 
 
@@ -140,7 +142,7 @@ public class AsciiArt{
       System.out.print("\\_");
       stadiumTopSpaces(line);
       System.out.println("|");
-    }
+    }//staidumTopWithField
 
 
     public static void stadiumTopSpaces(int line){
@@ -197,7 +199,7 @@ public class AsciiArt{
       System.out.print("_/");
       stadiumBottomSpaces(line);
       System.out.println("|");
-    }
+    }//stadiumBottomWithField
 
     public static void stadiumBottomSpaces(int line){
       int numberOfSpaces = (STADIUM_WIDTH/2) - (line * 2);
@@ -211,5 +213,44 @@ public class AsciiArt{
         System.out.print("*");
       }
     }//field
+
+//************FLAG************//
+
+public static void flag(){
+  flagTop();
+  flagBottom();
+  flagPole();
+}//flag
+
+public static void flagTop(){
+  for(int line = 0; line <= SIZE; line++){
+    for(int i = 0; i < line; i++){
+        System.out.print("*");
+      for(int j = 0; j <i; j++){
+        System.out.print("_");
+      }
+    }
+    System.out.println();
+  }
+}//flagTop
+
+public static void flagBottom(){
+  for(int line = SIZE; line > 0; line--){
+    for(int i = 0; i < line; i++){
+        System.out.print("*");
+      for(int j = 0; j <i; j++){
+        System.out.print("_");
+      }
+    }
+    System.out.println();
+  }
+}//flagBottom
+
+public static void flagPole(){
+  int poleLength = SIZE * 4;
+  for(int i = 0; i < poleLength; i++){
+    System.out.println("**");
+  }
+}//flagPole
 
 }//AsciiArt
