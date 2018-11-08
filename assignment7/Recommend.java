@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Reccomend{
+public class Recommend{
   public static final int BOOKCOUNT = 20;
   public static final int USERCOUNT = 30;
   public static final int NUM_RECOMMENDATIONS = 3;
